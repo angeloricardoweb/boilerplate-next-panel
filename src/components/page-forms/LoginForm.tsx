@@ -4,6 +4,7 @@ import { useForm } from 'react-hook-form';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { InputText } from '../forms-partials/InputText';
+import toast from 'react-hot-toast';
 
 export function LoginForm() {
     const router = useRouter()
@@ -17,12 +18,15 @@ export function LoginForm() {
     } = useForm();
 
     async function handlePost(data: any) {
+        const loadingToast = toast.loading('Realizando login...')
         try {
             router.push('/dashboard/coordenador/projetos')
+            toast.success('Login realizado com sucesso!')
         } catch (error) {
             console.log(error);
-
+            toast.error('Erro ao realizar login!')
         }
+        toast.dismiss(loadingToast)
     }
 
     return (
