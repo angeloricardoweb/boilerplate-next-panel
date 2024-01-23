@@ -1,6 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 import { LoginForm } from '@/components/page-forms/LoginForm'
+import type { Metadata } from "next";
+
 import React from 'react'
+
+export const metadata: Metadata = {
+    title: "Login",
+    description: "Versão de desenvolvimento do Boilerplate Next Panel",
+  };
 
 export default function page() {
 
