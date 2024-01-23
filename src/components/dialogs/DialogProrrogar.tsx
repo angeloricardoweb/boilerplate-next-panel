@@ -19,7 +19,7 @@ export function DialogProrrogar() {
                     <Dialog.Title className="text-lg font-bold leading-tight text-zinc-800">
                         Prorrogar projeto
                     </Dialog.Title>
-                    <ProrrogarForm/>
+                    <ProrrogarForm onCloseModal={() => setOpen(false)} />
                 </Dialog.Content>
             </Dialog.Portal>
         </Dialog.Root>

@@ -2,7 +2,7 @@ import React from 'react'
 import { LabelError } from './LabelError'
 import { Label } from './Label'
 
-export function InputText({
+export function Textarea({
     label,
     name,
     register,

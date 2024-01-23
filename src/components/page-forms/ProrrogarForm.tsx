@@ -5,8 +5,9 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import toast from 'react-hot-toast';
 import { InputText } from '../forms-partials/InputText';
+import { Textarea } from '../forms-partials/Textarea';
 
-export function ProrrogarForm() {
+export function ProrrogarForm({ onCloseModal }: { onCloseModal: any }) {
     const router = useRouter()
     const {
         register,
@@ -32,11 +33,12 @@ export function ProrrogarForm() {
     return (
         <div>
             <form onSubmit={handleSubmit(handlePost)}>
-                <InputText type="date" label={'Nova anterior'} name={'null'} register={register} errors={errors} disabled />
+                <InputText type="date" label={'Data atual'} name={'null'} register={register} errors={errors} disabled />
                 <InputText type="date" label={'Nova data'} name={'nova_data'} register={register} errors={errors} />
-                <div className='grid grid-cols-2 gap-3'>
+                <Textarea label={'Motivo'} name={'motivo'} register={register} errors={errors} />
+                <div className='grid grid-cols-2 gap-3 mt-3'>
                     <button type="submit" className="btn btn-primary mt-3 w-full">Prorrogar</button>
-                    <button type="button" onClick={() => router.push("/auth/criar-conta")} className="btn btn-neutral my-3 w-full">Cancelar prorrogação</button>
+                    <button type="button" onClick={onCloseModal} className="btn btn-neutral my-3 w-full">Cancelar prorrogação</button>
                 </div>
             </form>
         </div>

@@ -18,7 +18,7 @@ export default function Page() {
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Pesquisa e ensino de programação</td>
+                            <td>Análise de dados</td>
                             <td>
                                 <span className='badge badge-warning'>Rascunho</span>
                             </td>
@@ -38,18 +38,18 @@ export default function Page() {
                             </td>
                         </tr>
                         <tr>
-                            <td>Pesquisa e ensino de programação</td>
+                            <td>Ensino de Inteligência Artificial</td>
                             <td>
                                 <span className='badge badge-success'>Finalizado</span>
                             </td>
                             <td>22/09/2021</td>
                             <td className='grid grid-cols-3 gap-2'>
                                 <button className="btn btn-sm btn-primary">Visualizar</button>
-                                <button className="btn btn-sm btn-primary">Prorrogar</button>
+                                <DialogProrrogar />
                             </td>
                         </tr>
                         <tr>
-                            <td>Pesquisa e ensino de programação</td>
+                            <td>Capacição de professores</td>
                             <td>
                                 <span className='badge badge-info animate-pulse'>Em andamento</span>
                             </td>
