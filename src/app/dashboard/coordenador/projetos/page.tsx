@@ -1,8 +1,16 @@
+'use client'
 import { DialogProrrogar } from '@/components/dialogs/DialogProrrogar'
 import { Subtitle } from '@/components/typography/Subtitle'
+import { useRouter } from 'next/navigation'
 import React from 'react'
 
 export default function Page() {
+    const router = useRouter()
+
+    function goToProjectDetails(id: string) {
+        router.push(`/dashboard/coordenador/projetos/${id}`)
+    }
+
     return (
         <div>
             <Subtitle text='Projetos' />
@@ -24,7 +32,7 @@ export default function Page() {
                             </td>
                             <td>22/09/2021</td>
                             <td className='grid grid-cols-3 gap-2'>
-                                <button className="btn btn-sm btn-primary">Visualizar</button>
+                                <button className="btn btn-sm btn-primary" onClick={() => goToProjectDetails("1")}>Visualizar</button>
                             </td>
                         </tr>
                         <tr>
@@ -34,7 +42,7 @@ export default function Page() {
                             </td>
                             <td>22/09/2021</td>
                             <td className='grid grid-cols-3 gap-2'>
-                                <button className="btn btn-sm btn-primary">Visualizar</button>
+                                <button className="btn btn-sm btn-primary" onClick={() => goToProjectDetails("1")}>Visualizar</button>
                             </td>
                         </tr>
                         <tr>
@@ -44,7 +52,7 @@ export default function Page() {
                             </td>
                             <td>22/09/2021</td>
                             <td className='grid grid-cols-3 gap-2'>
-                                <button className="btn btn-sm btn-primary">Visualizar</button>
+                                <button className="btn btn-sm btn-primary" onClick={() => goToProjectDetails("1")}>Visualizar</button>
                                 <DialogProrrogar />
                             </td>
                         </tr>
@@ -55,7 +63,7 @@ export default function Page() {
                             </td>
                             <td>22/09/2021</td>
                             <td className='grid grid-cols-3 gap-2'>
-                                <button className="btn btn-sm btn-primary">Visualizar</button>
+                                <button className="btn btn-sm btn-primary" onClick={() => goToProjectDetails("1")}>Visualizar</button>
                                 <DialogProrrogar />
                             </td>
                         </tr>

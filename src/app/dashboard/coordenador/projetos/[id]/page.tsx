@@ -4,10 +4,13 @@ import { InputText } from '@/components/forms-partials/InputText';
 import { Label } from '@/components/forms-partials/Label';
 import { LabelError } from '@/components/forms-partials/LabelError';
 import { Subtitle } from '@/components/typography/Subtitle'
+import { useParams } from 'next/navigation';
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form';
 
 export default function Page() {
+  const params = useParams<{ id: string }>()
+
   const {
     register,
     handleSubmit,
@@ -24,7 +27,9 @@ export default function Page() {
 
   return (
     <div>
-      <Subtitle text='Novo projeto' />
+      <Subtitle text={`Visualizar projeto`} />
+      <small>{params.id}</small>
+
       <form className='max-w-xl'>
         <fieldset>
           <InputText label={'Titulo do projeto'} name={'titulo_projeto'} register={register} errors={errors} />
@@ -144,7 +149,7 @@ export default function Page() {
               </label>}
             {
               !financiamento && (
-                <fieldset className='mt-3 p-3 bg-zinc-100 rounded-xl'>
+                <fieldset className='mt-3'>
                   <p>
                     Declaro que o projeto não possui financiamento externo. Assim como não possui vínculo com empresas privadas ou públicas.
                   </p>
@@ -172,8 +177,7 @@ export default function Page() {
           </div>
         </fieldset>
         <div className='grid grid-cols-2 gap-3 mt-5'>
-          <DialogConfirmProjectDetails/>
-          <button className='btn'>Salvar como rascunho</button>
+          <DialogConfirmProjectDetails />
         </div>
       </form >
     </div >
