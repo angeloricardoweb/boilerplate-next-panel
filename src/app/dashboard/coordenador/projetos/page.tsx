@@ -22,7 +22,7 @@ export default function Page() {
                                 <span className='badge badge-warning'>Rascunho</span>
                             </td>
                             <td>22/09/2021</td>
-                            <td>
+                            <td className='grid grid-cols-3 gap-2'>
                                 <button className="btn btn-sm btn-primary">Visualizar</button>
                             </td>
                         </tr>
@@ -32,7 +32,7 @@ export default function Page() {
                                 <span className='badge badge-error'>Cancelado</span>
                             </td>
                             <td>22/09/2021</td>
-                            <td>
+                            <td className='grid grid-cols-3 gap-2'>
                                 <button className="btn btn-sm btn-primary">Visualizar</button>
                             </td>
                         </tr>
@@ -42,7 +42,7 @@ export default function Page() {
                                 <span className='badge badge-success'>Finalizado</span>
                             </td>
                             <td>22/09/2021</td>
-                            <td>
+                            <td className='grid grid-cols-3 gap-2'>
                                 <button className="btn btn-sm btn-primary">Visualizar</button>
                                 <button className="btn btn-sm btn-primary">Reabrir</button>
                             </td>
@@ -53,9 +53,9 @@ export default function Page() {
                                 <span className='badge badge-info animate-pulse'>Em andamento</span>
                             </td>
                             <td>22/09/2021</td>
-                            <td>
+                            <td className='grid grid-cols-3 gap-2'>
                                 <button className="btn btn-sm btn-primary">Visualizar</button>
-                                <button className="btn btn-sm btn-primary">prorrogar</button>
+                                <button className="btn btn-sm btn-primary">Prorrogar</button>
                             </td>
                         </tr>
                     </tbody>
