@@ -1,6 +1,8 @@
 'use client'
+import { DialogPareceres } from '@/components/dialogs/DialogPareceres'
 import { DialogProrrogar } from '@/components/dialogs/DialogProrrogar'
 import { Subtitle } from '@/components/typography/Subtitle'
+import { Icon } from '@iconify/react/dist/iconify.js'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 
@@ -21,6 +23,7 @@ export default function Page() {
                             <th>Título do projeto</th>
                             <th>Status</th>
                             <th>Última atualização</th>
+                            <th>Pareceres</th>
                             <th>Opções</th>
                         </tr>
                     </thead>
@@ -31,6 +34,9 @@ export default function Page() {
                                 <span className='badge badge-warning'>Rascunho</span>
                             </td>
                             <td>22/09/2021</td>
+                            <td>
+                                <DialogPareceres />
+                            </td>
                             <td className='grid grid-cols-3 gap-2'>
                                 <button className="btn btn-sm btn-primary" onClick={() => goToProjectDetails("1")}>Visualizar</button>
                             </td>
@@ -41,6 +47,9 @@ export default function Page() {
                                 <span className='badge badge-error'>Cancelado</span>
                             </td>
                             <td>22/09/2021</td>
+                            <td>
+                                <DialogPareceres />
+                            </td>
                             <td className='grid grid-cols-3 gap-2'>
                                 <button className="btn btn-sm btn-primary" onClick={() => goToProjectDetails("1")}>Visualizar</button>
                             </td>
@@ -51,6 +60,9 @@ export default function Page() {
                                 <span className='badge badge-success'>Finalizado</span>
                             </td>
                             <td>22/09/2021</td>
+                            <td>
+                                <DialogPareceres />
+                            </td>
                             <td className='grid grid-cols-3 gap-2'>
                                 <button className="btn btn-sm btn-primary" onClick={() => goToProjectDetails("1")}>Visualizar</button>
                                 <DialogProrrogar />
@@ -62,6 +74,9 @@ export default function Page() {
                                 <span className='badge badge-info animate-pulse'>Em andamento</span>
                             </td>
                             <td>22/09/2021</td>
+                            <td>
+                                <DialogPareceres />
+                            </td>
                             <td className='grid grid-cols-3 gap-2'>
                                 <button className="btn btn-sm btn-primary" onClick={() => goToProjectDetails("1")}>Visualizar</button>
                                 <DialogProrrogar />
