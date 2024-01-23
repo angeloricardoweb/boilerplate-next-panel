@@ -44,7 +44,7 @@ export default function Page() {
                             <td>22/09/2021</td>
                             <td className='grid grid-cols-3 gap-2'>
                                 <button className="btn btn-sm btn-primary">Visualizar</button>
-                                <button className="btn btn-sm btn-primary">Reabrir</button>
+                                <button className="btn btn-sm btn-primary">Prorrogar</button>
                             </td>
                         </tr>
                         <tr>
