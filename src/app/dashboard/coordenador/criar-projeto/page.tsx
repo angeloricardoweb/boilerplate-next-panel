@@ -1,7 +1,7 @@
 'use client'
-import { InputText } from '@/components/forms/InputText'
-import { Label } from '@/components/forms/Label';
-import { LabelError } from '@/components/forms/LabelError';
+import { InputText } from '@/components/forms-partials/InputText';
+import { Label } from '@/components/forms-partials/Label';
+import { LabelError } from '@/components/forms-partials/LabelError';
 import { Subtitle } from '@/components/typography/Subtitle'
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form';

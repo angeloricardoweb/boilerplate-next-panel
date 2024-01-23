@@ -44,6 +44,7 @@ export default function Page() {
                             <td>22/09/2021</td>
                             <td>
                                 <button className="btn btn-sm btn-primary">Visualizar</button>
+                                <button className="btn btn-sm btn-primary">Reabrir</button>
                             </td>
                         </tr>
                         <tr>
@@ -54,6 +55,7 @@ export default function Page() {
                             <td>22/09/2021</td>
                             <td>
                                 <button className="btn btn-sm btn-primary">Visualizar</button>
+                                <button className="btn btn-sm btn-primary">prorrogar</button>
                             </td>
                         </tr>
                     </tbody>
