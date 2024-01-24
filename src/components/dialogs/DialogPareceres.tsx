@@ -34,9 +34,9 @@ export function DialogPareceres() {
                                             {faker.lorem.paragraph()}
                                         </div>
                                     </p>
-                                </div>))
+                                </div>
+                            ))
                         }
-
                     </section>
                 </Dialog.Content>
             </Dialog.Portal>
