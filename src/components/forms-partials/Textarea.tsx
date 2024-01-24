@@ -27,7 +27,7 @@ export function Textarea({
                 placeholder={placeholder}
                 style={errors[name] && { border: '1px solid red' }}
                 {...register(name)}
-                className="textarea textarea-bordered h-24"
+                className="textarea textarea-bordered h-16"
                 disabled={disabled}
                 required={required}
             />

@@ -19,13 +19,14 @@ export function ProrrogarForm({ onCloseModal }: { onCloseModal: any }) {
     } = useForm();
 
     async function handlePost(data: any) {
-        const loadingToast = toast.loading('Realizando login...')
+        const loadingToast = toast.loading('Salvando...')
+        await new Promise(resolve => setTimeout(resolve, 2000));
         try {
-            router.push('/dashboard/coordenador/projetos')
-            toast.success('Login realizado com sucesso!')
+            toast.success('Prorrogação enviada, enviamos um resumo para seu e-mail!')
+            onCloseModal()
         } catch (error) {
             console.log(error);
-            toast.error('Erro ao realizar login!')
+            toast.error('Ops, corroeu um erro')
         }
         toast.dismiss(loadingToast)
     }
