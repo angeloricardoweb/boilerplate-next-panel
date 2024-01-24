@@ -2,6 +2,7 @@ import React from 'react'
 import { DialogPareceres } from '../dialogs/DialogPareceres'
 import { DialogProrrogar } from '../dialogs/DialogProrrogar'
 import { DialogRelatorio } from '../dialogs/DialogRelatorio'
+import { DialogColaboradorChangeStatus } from '../dialogs/DialogColaboradorChangeStatus'
 
 
 
@@ -29,7 +30,7 @@ export function ColaboradoresTable() {
                             <DialogPareceres />
                         </td>
                         <td className='grid grid-cols-3 gap-2'>
-                            <DialogRelatorio />
+                            <DialogColaboradorChangeStatus />
                         </td>
                     </tr>
                 </tbody>
