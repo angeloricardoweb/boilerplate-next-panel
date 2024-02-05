@@ -67,7 +67,7 @@ export default function DashboardNavbar({areaName}:{areaName:string}) {
       </div>
 
       <div className="flex-none gap-2">
-        <h3 className='font-bold'>Angelo Ricardo - (Coordenador)</h3>
+        <h3 className='font-bold'>Angelo Ricardo</h3>
         <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">

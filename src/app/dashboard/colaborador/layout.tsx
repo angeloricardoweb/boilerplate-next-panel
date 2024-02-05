@@ -12,7 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     return (
         <main className=''>
             <DashboardNavbar areaName='Colaborador' />
-            <div className='grid grid-cols-5 p-5'>
+            <div className='grid grid-cols-5 p-5 gap-5'>
                 <div className="col-span-1">
                     <ul className="menu bg-base-200 w-56 rounded-box">
                         <li>

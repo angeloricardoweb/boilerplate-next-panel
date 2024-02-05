@@ -14,7 +14,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     return (
         <main className=''>
             <DashboardNavbar areaName={'Coordenador'} />
-            <div className='grid grid-cols-5 p-3'>
+            <div className='grid grid-cols-5 p-3 gap-5'>
                 <div className="col-span-1">
                     <ul className="menu bg-base-200 w-56 rounded-box">
                         <li>

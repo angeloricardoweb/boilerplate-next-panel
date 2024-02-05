@@ -16,6 +16,7 @@ export function ColaboradoresTable() {
                         <th>Nome</th>
                         <th>Status</th>
                         <th>Data da solicitação</th>
+                        <th>Pareceres</th>
                         <th>Opções</th>
                     </tr>
                 </thead>
