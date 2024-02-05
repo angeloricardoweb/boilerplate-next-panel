@@ -1,14 +1,16 @@
+'use client'
 import React from 'react'
 import { DialogPareceres } from '../dialogs/DialogPareceres'
 import { DialogProrrogar } from '../dialogs/DialogProrrogar'
 import { DialogRelatorio } from '../dialogs/DialogRelatorio'
+import { useRouter } from 'next/navigation'
 
 type ProjectTableProps = {
-    goToProjectDetails: (id: string) => void
     type?: 'relatorio' | 'prorrogacao'
 }
 
-export function ProjectsTable({ goToProjectDetails, type }: ProjectTableProps) {
+export function ProjectsTable({ type }: ProjectTableProps) {
+    const router = useRouter()
 
     return (
         <div className="overflow-x-auto">
@@ -33,7 +35,7 @@ export function ProjectsTable({ goToProjectDetails, type }: ProjectTableProps) {
                             <DialogPareceres />
                         </td>
                         <td className='grid grid-cols-3 gap-2'>
-                            <button className="btn btn-sm btn-primary" onClick={() => goToProjectDetails("1")}>Visualizar</button>
+                            <button className="btn btn-sm btn-primary" onClick={() => router.push(`/dashboard/projeto/${123}`)}>Visualizar</button>
                             {
                                 type === 'relatorio' && <DialogRelatorio />
                             }
