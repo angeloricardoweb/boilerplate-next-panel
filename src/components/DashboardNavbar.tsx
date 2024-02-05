@@ -2,6 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useEffect } from 'react'
 import Cookies from 'js-cookie'
+import Link from 'next/link'
 
 const themes = [
   "light",
@@ -38,7 +39,7 @@ const themes = [
   "sunset",
 ]
 
-export default function DashboardNavbar({areaName}:{areaName:string}) {
+export default function DashboardNavbar({ areaName }: { areaName: string }) {
   const [theme, setTheme] = React.useState('light')
 
   function saveThemeOnCookie(theme: string) {
@@ -58,7 +59,7 @@ export default function DashboardNavbar({areaName}:{areaName:string}) {
   return (
     <div className="navbar bg-base-100 shadow">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">SISProj <small className='text-sm'>v1.0.0</small></a>
+        <a className="btn btn-ghost text-xl">Boilerplate Next Panel <small className='text-sm'>v1.0.0</small></a>
         <h2 className='bg-neutral p-2 rounded text-white mx-auto'>
           <strong>
             Área do {areaName}
@@ -89,13 +90,15 @@ export default function DashboardNavbar({areaName}:{areaName:string}) {
                 ))}
               </select>
             </li>
-            <li>
+            {/* <li>
               <a className="justify-between">
                 Meu Perfil
               </a>
-            </li>
-            <li><a>Configurações</a></li>
-            <li><a>Sair da conta</a></li>
+            </li> */}
+            {/* <li><a>Configurações</a></li> */}
+            <li><Link
+              href="/auth/login"
+            >Sair da conta</Link></li>
           </ul>
         </div>
       </div>

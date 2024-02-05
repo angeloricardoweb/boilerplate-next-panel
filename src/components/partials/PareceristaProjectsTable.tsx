@@ -36,7 +36,7 @@ export function PareceristaProjectsTable() {
                             <DialogPareceres />
                         </td>
                         <td className='grid grid-cols-3 gap-2'>
-                            <button className="btn btn-sm btn-primary" onClick={() => null}>Ver Projeto</button>
+                            <button className="btn btn-sm btn-primary" onClick={() => router.push(`/dashboard/projeto/${123}`)}>Ver Projeto</button>
                             <DialogPareceresCreate />
                         </td>
                     </tr>
@@ -51,7 +51,7 @@ export function PareceristaProjectsTable() {
                             <DialogPareceres />
                         </td>
                         <td className='grid grid-cols-3 gap-2'>
-                            <button className="btn btn-sm btn-primary w-full" onClick={() => null}>Ver Projeto</button>
+                            <button className="btn btn-sm btn-primary w-full" onClick={() => router.push(`/dashboard/projeto/${123}`)}>Ver Projeto</button>
                             <DialogPareceresCreate />
                         </td>
                     </tr>
