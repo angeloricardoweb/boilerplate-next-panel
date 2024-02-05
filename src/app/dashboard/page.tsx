@@ -17,12 +17,12 @@ export default function Page() {
                             Coordenador
                         </button>
                         <button
-                            onClick={() => router.push('/dashboard/coordenador/prorrogacao-de-projeto')}
+                            onClick={() => router.push('/dashboard/colaborador/projetos')}
                             className='btn btn-primary'>
                             Colaborador
                         </button>
                         <button
-                            onClick={() => router.push('/dashboard/coordenador/prorrogacao-de-projeto')}
+                            onClick={() => router.push('/dashboard/parecerista/projetos')}
                             className='btn btn-primary'>
                             Parecerista
                         </button>

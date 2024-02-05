@@ -38,7 +38,7 @@ const themes = [
   "sunset",
 ]
 
-export default function DashboardNavbar() {
+export default function DashboardNavbar({areaName}:{areaName:string}) {
   const [theme, setTheme] = React.useState('light')
 
   function saveThemeOnCookie(theme: string) {
@@ -59,7 +59,13 @@ export default function DashboardNavbar() {
     <div className="navbar bg-base-100 shadow">
       <div className="flex-1">
         <a className="btn btn-ghost text-xl">SISProj <small className='text-sm'>v1.0.0</small></a>
+        <h2 className='bg-neutral p-2 rounded text-white mx-auto'>
+          <strong>
+            Área do {areaName}
+          </strong>
+        </h2>
       </div>
+
       <div className="flex-none gap-2">
         <h3 className='font-bold'>Angelo Ricardo - (Coordenador)</h3>
         <div className="dropdown dropdown-end">
@@ -68,6 +74,7 @@ export default function DashboardNavbar() {
               <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
             </div>
           </div>
+
           <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
             <li>
               <select className="select select-sm select-bordered w-full max-w-xs"

@@ -28,8 +28,6 @@ export default function Page() {
   return (
     <div>
       <Subtitle text={`Visualizar projeto`} />
-      <small>{params.id}</small>
-
       <form className='max-w-xl'>
         <fieldset>
           <InputText label={'Titulo do projeto'} name={'titulo_projeto'} register={register} errors={errors} />

@@ -23,11 +23,10 @@ export function ProjectsTable({ goToProjectDetails, type }: ProjectTableProps) {
                     </tr>
                 </thead>
                 <tbody>
-
                     <tr>
                         <td>Capacição de professores</td>
                         <td>
-                            <span className='badge badge-info animate-pulse'>Em andamento</span>
+                            <small className='badge badge-info animate-pulse text-sm'>Em andamento</small>
                         </td>
                         <td>22/09/2021</td>
                         <td>
